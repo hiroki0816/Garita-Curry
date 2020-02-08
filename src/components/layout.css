@@ -1,5 +1,5 @@
 html {
-  font-family: sans-serif;
+  font-family: "游ゴシック", "YuGothic", "メイリオ", meiryo, sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -8,6 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+/* 
 article,
 aside,
 details,
@@ -619,4 +622,4 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-}
+} */
