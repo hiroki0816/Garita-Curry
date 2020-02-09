@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import SEO from "../components/seo"
 import "../components/layout.css"
 import Layout from "../components/layout"
-import Color from "../components/header"
+import Menu from "../components/menu"
+
 
 const IndexPage = () => (
   <div>
@@ -21,9 +22,42 @@ const IndexPage = () => (
         </Message>
       </Wrap>
     </MessageCont>
+    <MenuCont>
+      <Wrap>
+        <Flex>
+          <Menu 
+            imgUrl="https://i.gyazo.com/8bb5ff25779bf6cdbdbd2a3c50a780f7.png"
+            name="ガリタカリー" 
+            description="まずはじめはこれ食っときゃ間違いないヨ!  スパイスを油と愛で炒めるのがコツ！"
+          />
+          <Menu 
+            imgUrl="https://i.gyazo.com/3f00e03fc58b9ab5222ad9de72ee2279.png"
+            name="バタチキカリー" 
+            description="バターと生クリームとカシューナッツのなめらかさと比例して作るのがめんどくさいのが玉にキズ"
+          />
+          <Menu 
+            imgUrl="https://i.gyazo.com/edbb8c634419c08ec5b9f27d766dbef5.png"
+            name="ガリタキーマ" 
+            description="ターメリックライスと目玉焼きプラスで幸せ。ちなみにガリタキーマのキーマはキーマカレーのキーマ。"
+          />
+          <Menu 
+            imgUrl="https://i.gyazo.com/7f2a9625c527904e27d379e6f8c8bcbd.png"
+            name="アチャール" 
+            description="インドのお漬け物。さっぱりとした味付けでカレーのお供にピッタリ。助さん格さんくらいピッタリ。"
+          />
+        </Flex>
+      </Wrap>
+    </MenuCont>
   </Layout>
   </div>
 )
+
+
+
+const MenuCont = styled.div`
+  width: 100%;
+  height: auto;
+`;
 
 const Message = styled.p`
   text-align: center;
@@ -59,6 +93,11 @@ const Wrap = styled.div`
     Width: 980px;
     padding-top: 72px;
     padding-bottom: 72px;
+`;
+
+const Flex = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export default IndexPage
