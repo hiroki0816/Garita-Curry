@@ -24,6 +24,10 @@ const IndexPage = () => (
     </MessageCont>
     <MenuCont>
       <Wrap>
+        <MenuTitle>
+          <p>献立</p>
+          <h2>スパイスカレーお品書き</h2>
+        </MenuTitle>
         <Flex>
           <Menu 
             imgUrl="https://i.gyazo.com/8bb5ff25779bf6cdbdbd2a3c50a780f7.png"
@@ -53,6 +57,27 @@ const IndexPage = () => (
 )
 
 
+const MenuTitle = styled.div`
+  margin-bottom: 22px;
+  p {
+    width: 54px;
+    padding: 5px 14px;
+    font-size: 24px;
+    margin: 0;
+    border-top : 4px solid #333;
+    border-left : 4px solid #333;
+    border-right : 4px solid #333;
+    letter-spacing: 0.07em;
+  }
+  h2 {
+    display: inline-block;
+    padding: 5px 14px;
+    margin: 0;
+    font-size: 32px;
+    border : 4px solid #333;
+    letter-spacing: 0.1em;
+  }
+`;
 
 const MenuCont = styled.div`
   width: 100%;
@@ -90,14 +115,14 @@ const MessageCont = styled.div`
 
 const Wrap = styled.div`
     margin: 0 auto;
-    Width: 980px;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    max-Width: 980px;
+    padding: 72px 16px;
 `;
 
 const Flex = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 export default IndexPage

@@ -12,9 +12,9 @@ const Menu = (props) => (
   )
 
 const MenuCard = styled.div`
-    width: 440px;
-    minWidth: 360px;
-    margin: 20px ;
+    width: 48%;
+    min-Width: 330px;
+    margin: 20px 0;
     p {
         margin: 6px 0;
         letter-spacing: 0.1em;
