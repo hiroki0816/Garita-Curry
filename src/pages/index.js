@@ -11,7 +11,7 @@ const IndexPage = () => (
   <div>
   <Layout>
     <SEO title="Home" />
-    <MessageCont>
+    <YellowCont>
       <Wrap>
         <SectionTitle>
           <h3>ガリタのつぶやき</h3>
@@ -21,7 +21,7 @@ const IndexPage = () => (
           スパイスカレーには2種類あるんだってさ。<br/>人を笑顔にするカレーかそれ以外か。<br/><br/>どうせ作るなら皆がとびっきり笑顔になれる<br/>スパイスカレーが良いよネ。<br/><br/>そんなわけで今日もアルマハウスで<br/>いっぱい作っちゃうヨ。<br/><br/>さぁみんなで一緒に食べよう！<br/>アチャールもサービスしちゃうからさ!
         </Message>
       </Wrap>
-    </MessageCont>
+    </YellowCont>
     <MenuCont>
       <Wrap>
         <MenuTitle>
@@ -52,13 +52,83 @@ const IndexPage = () => (
         </Flex>
       </Wrap>
     </MenuCont>
+    <YellowCont>
+      <Wrap>
+        <SectionTitle>
+            <h3>ガリタカリーの常連さん</h3>
+            <div></div>
+        </SectionTitle>
+        <Carousel>
+          <li>
+            <img src="https://i.gyazo.com/291b8693d79fba26b9fccd4a5f858824.png"/>
+            <p>二郎を超えた。<br/>そう思わせてくれた初めての食べ物。</p>
+            <p>ー YOKINIST</p>
+          </li>
+          <li>
+            <img src="https://i.gyazo.com/0665991d738d25106a203384c66b75e7.png"/>
+            <p>もう戻れませんよ。<br/>こんな世界を知ってしまったらね。</p>
+            <p>ー GREATEST</p>
+          </li>
+          <li>
+            <img src="https://i.gyazo.com/6869995a64057d6f42e3e8fc755bd0f2.png"/>
+            <p>ご飯は10号炊きます。<br/>それが誠意を示すということ。</p>
+            <p>ー KENJI</p>
+          </li>
+          <li>
+            <img src="https://i.gyazo.com/83a40c6ca85bddf6fb97bbabe54977f0.png"/>
+            <p>カレーかラップかどっちが好きって？<br/>そんなの愛に決まってるだろ。</p>
+            <p>ー TAKAKACKS</p>
+          </li>
+          <li>
+            <img src="https://i.gyazo.com/d02f93bcfeeafd534a1a2e311b4532a3.png"/>
+            <p>皆まで言うな。<br/>美味であることは揺るがないさ。</p>
+            <p>ー BOB</p>
+          </li>
+          <li>
+            <img src="https://i.gyazo.com/c9f0b8013efea4ba255f7ba1c50200c2.png"/>
+            <p>よくここまで頑張ったね。<br/>あなたは私の誇りよ。</p>
+            <p>ー UNKNOWN</p>
+          </li>
+          <li></li>
+        </Carousel>
+      </Wrap>
+    </YellowCont>
   </Layout>
   </div>
 )
 
+const Carousel = styled.ul`
+  width:1300px;
+  padding:12px 0;
+  margin-top: 48px;
+  overflow-x:scroll;
+  -webkit-overflow-scrolling:touch;
+  overflow-scrolling:touch;
+  white-space:nowrap;
+  li { 
+    background: #f7f7d9;
+    margin: 14px;
+    text-align: center;
+    width: 360px;
+    display: inline-block;
+    p {
+      text-align: left;
+      font-size: 17px;
+      letter-spacing: 0.07em;
+      line-height: 30px;
+      margin: 7px 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+`;
 
 const MenuTitle = styled.div`
-  margin-bottom: 22px;
+  margin-bottom: 26px;
   p {
     width: 54px;
     padding: 5px 14px;
@@ -107,16 +177,17 @@ const SectionTitle = styled.div `
     }
 `;
 
-const MessageCont = styled.div`
+const YellowCont = styled.div`
     background-color: #f7f7d9;
     width: 100%;
     height: auto;
+    overflow: hidden;
 `;
 
 const Wrap = styled.div`
     margin: 0 auto;
     max-Width: 980px;
-    padding: 72px 16px;
+    padding: 82px 16px;
 `;
 
 const Flex = styled.div`
