@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import "../components/layout.css"
 import Layout from "../components/layout"
 import Menu from "../components/menu"
-
+import Footer from "../components/footer"
 
 const IndexPage = () => (
   <div>
@@ -22,7 +22,7 @@ const IndexPage = () => (
         </Message>
       </Wrap>
     </YellowCont>
-    <MenuCont>
+    <NormalCont>
       <Wrap>
         <MenuTitle>
           <p>献立</p>
@@ -51,7 +51,7 @@ const IndexPage = () => (
           />
         </Flex>
       </Wrap>
-    </MenuCont>
+    </NormalCont>
     <YellowCont>
       <Wrap>
         <SectionTitle>
@@ -93,9 +93,71 @@ const IndexPage = () => (
         </Carousel>
       </Wrap>
     </YellowCont>
+    <NormalCont>
+      <Wrap>
+      <SectionTitle>
+            <h3>ガリタからのお知らせ</h3>
+            <div></div>
+        </SectionTitle>
+      </Wrap>
+    </NormalCont>
+    <YellowCont>
+      <Flex>
+        <AccessLeft>
+          <img src="https://i.gyazo.com/b5d0ddf76ad3e66141318dc2b0a45d77.png"/>
+        </AccessLeft>
+        <AccessRight>
+          <AccessTitle>
+              <h3>ガリタカリー情報</h3>
+              <div></div>
+          </AccessTitle>
+          <p>〒153-0064<br/>東京都目黒区下目黒 5-4-1<br/>下目黒ハウス303<br/><br/>0124-73-1165<br/><br/>不定休</p>
+        </AccessRight>
+      </Flex>
+    </YellowCont>
+    <Footer/>
   </Layout>
   </div>
 )
+
+const AccessTitle = styled.div `
+    margin-top: 44px;
+    margin-left: 40px;
+    text-align: left;
+    h3 {
+      color: #212121;
+      font-size: 26px;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+    }
+    div {
+      width: 90px;
+      border-bottom: 3px solid #212121;
+    }
+`;
+
+const AccessLeft = styled.div`
+  width: 50%;
+  height: 420px;
+  object-fit: cover;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
+
+const AccessRight = styled.div`
+  width: 50%;
+  height: 420px;
+  p {
+    margin-left: 40px;
+    font-size: 18px;
+    letter-spacing: 0.13em;
+    line-height: 36px;
+  }
+`;
+
 
 const Carousel = styled.ul`
   width:1300px;
@@ -149,7 +211,7 @@ const MenuTitle = styled.div`
   }
 `;
 
-const MenuCont = styled.div`
+const NormalCont = styled.div`
   width: 100%;
   height: auto;
 `;
