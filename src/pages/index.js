@@ -11,6 +11,13 @@ const IndexPage = () => (
   <div>
   <Layout>
     <SEO title="Home" />
+    <TopContent>
+      <TopText>
+        <h1>SPICES<br/>AND<br/>HAPPY</h1>
+        <div></div>
+        <p>スパイスから生まれる笑顔<br/>最高なんだよネ。</p>
+      </TopText>
+    </TopContent>
     <YellowCont>
       <Wrap>
         <SectionTitle>
@@ -119,6 +126,39 @@ const IndexPage = () => (
   </Layout>
   </div>
 )
+
+const TopText = styled.div`
+  z-index: 888;
+  position: absolute;
+  top: 21%;
+  left: 6%;
+  h1 {
+    font-size: 80px;
+    letter-spacing: 0.2em;
+    font-family: Avenir;
+    font-weight: 600;
+    line-height: 100px;
+    margin: 0;
+  }
+  div {
+    margin: 20px 0;
+    width: 70px;
+    border-bottom: 6px solid #212121;
+  }
+  p {
+    font-size: 22px;
+    letter-spacing: 0.2em;
+  }
+`;
+
+const TopContent = styled.div`
+  width: 100%;
+  height: 88vh;
+  position: relative;
+  background: url(https://i.gyazo.com/297af40444b26c24503f1375cef1fe07.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 const AccessTitle = styled.div `
     margin-top: 44px;
