@@ -23,9 +23,11 @@ const IndexPage = () => (
         <SectionTitle>
           <h3>ガリタのつぶやき</h3>
           <div></div>
+          <img src="https://i.gyazo.com/e2d0e9a5bd0ae3e60a69eef854198ace.png"/>
         </SectionTitle>
         <Message>
           スパイスカレーには2種類あるんだってさ。<br/>人を笑顔にするカレーかそれ以外か。<br/><br/>どうせ作るなら皆がとびっきり笑顔になれる<br/>スパイスカレーが良いよネ。<br/><br/>そんなわけで今日もアルマハウスで<br/>いっぱい作っちゃうヨ。<br/><br/>さぁみんなで一緒に食べよう！<br/>アチャールもサービスしちゃうからさ!
+          <img src="https://i.gyazo.com/e2d0e9a5bd0ae3e60a69eef854198ace.png"/>
         </Message>
       </Wrap>
     </YellowCont>
@@ -262,10 +264,34 @@ const Message = styled.p`
   font-size: 20px;
   letter-spacing: 0.13em;
   line-height: 41px;
+  position: relative;
+  img {
+    position: absolute;
+    bottom: -85px;
+    right: 10px;
+    width: 160px;
+    height: auto;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    animation-name: anim_s;
+    transform: rotate(30deg);
+    animation-duration: 2s;
+    @keyframes anim_s {
+          50% {
+              transform: rotate(-20deg);
+          }
+          100% {
+              transform: rotate(20deg);
+          }
+      }
+  }
 `;
 
 const SectionTitle = styled.div `
     text-align: center;
+    position: relative;
     h3 {
       color: #212121;
       font-size: 34px;
@@ -276,6 +302,28 @@ const SectionTitle = styled.div `
       width: 160px;
       border-bottom: 4px solid #212121;
       margin: 0 auto;
+    }
+    img {
+      position: absolute;
+      top: -80px;
+      left: 10px;
+      width: 160px;
+      height: auto;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-duration: 1.5s;
+      animation-name: anim_s;
+      transform: rotate(30deg);
+      animation-duration: 4s;
+      @keyframes anim_s {
+            50% {
+                transform: rotate(-20deg);
+            }
+            100% {
+                transform: rotate(20deg);
+            }
+        }
     }
 `;
 
